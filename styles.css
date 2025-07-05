@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-    align-items: center;
+    text-align: center;
 }
 
 header{
@@ -24,7 +24,17 @@ footer{
     font-family:  Arial, sans-serif,'Franklin Gothic Medium', 'Arial Narrow';
 }
 
+.admin_button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
 .container {
+    min-width: 500px;
     max-width: 600px;
     margin: 15px;
     padding: 20px;
@@ -34,7 +44,9 @@ footer{
 }
 
 .lista {
-    margin-top: 20px;
+    min-width: 500px;
+    margin: 20px;
+    margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -47,4 +59,12 @@ footer{
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+}
+
+.registro {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
 }
