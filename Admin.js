@@ -2,6 +2,7 @@ function listarIngressos() {
     const lista = document.getElementById('lista');
     lista.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
 
+    
     db.ref('compras/').once('value', (snapshot) => {
         snapshot.forEach((childSnapshot) => {
             const data = childSnapshot.val();
@@ -9,11 +10,11 @@ function listarIngressos() {
             const div = document.createElement('div');
             div.className = 'registro';
             div.innerHTML = `
-                <strong>${data.dataCompra}</strong><br>
-                <em>Quantidade restante: ${data.email}</em><br>
-                <strong>Preço: ${data.ingressoId}</strong>
-                <strong>Preço: ${data.nome}</strong>
-                <strong>Preço: ${data.quantidade}</strong>
+                <strong>Comprado em: ${data.dataCompra}</strong><br>
+                <strong>Ingresso: ${data.ingressoId}</strong><br>
+                <strong>Nome: ${data.nome}</strong><br>
+                <strong>Email: ${data.email}</strong><br>
+                <strong>Quantidade: ${data.quantidade}</strong>
             `;
             lista.appendChild(div);
         });
