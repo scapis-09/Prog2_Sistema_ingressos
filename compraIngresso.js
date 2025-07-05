@@ -11,8 +11,8 @@ function listarIngressos() {
             div.className = 'registro';
             div.innerHTML = `
                 <strong>${data.nome}</strong><br>
-                <em>Quantidade restante: ${data.quantidade}</em><br>
-                <strong>Preço: ${data.preco}</strong>
+                <em><strong>Quantidade restante: </strong>${data.quantidade}</em><br>
+                <strong>Preço: </strong>${data.preco}
                 <input type="number" id="qtd-${key}" min="1" max="${data.quantidade}" placeholder="Qtd" style="width:50px; margin-left:10px;">
                 <button onclick="comprarIngresso('${key}')">Comprar</button>
             `;
