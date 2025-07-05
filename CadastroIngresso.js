@@ -9,7 +9,7 @@ function CadastrarIngresso() {
     quantidade,
     preco
     };
-
+    
     db.ref('ingressos/').push(registro)
     .then(() => {
         console.log('Ingresso cadastrado com sucesso!');
@@ -28,7 +28,7 @@ function listarIngressos() {
             const data = childSnapshot.val();
             const div = document.createElement('div');
             div.className = 'registro';
-            div.innerHTML = `<strong>${data.nome}</strong> <em>${data.quantidade}</em> <strong>${data.preco}</strong>`
+            div.innerHTML = `<strong>Tipo do ingresso: </strong>${data.nome} <strong>Quantidade: </strong><em>${data.quantidade}</em> <strong>Preço: </strong>R$${data.preco}`
             lista.appendChild(div);
         });
     });
