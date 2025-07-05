@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="C:\Users\GScapinello\Desktop\Sistema venda ingressos\styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
@@ -12,19 +12,19 @@
 </head>
 <body>
     <header>
-        <h1>Sistema de Compra Ingressos // CADASTRO</h1>
+        <h1>Sistema de Compra Ingressos // COMPRA</h1>
     </header>
-    <div class="container" id="ticketContainer">
-        <h2>Comprar Ingressos</h2>
-        <label>Nome: <input type="text" id="comprador-nome" required></label>
-        <label>Email: <input type="email" id="comprador-email" required></label>
-        <br>
+    <div style="display: flex; flex-direction: column; align-items: center; margin: 20px">
+        <div class="container" id="ticketContainer">
+            <h2>Comprar Ingressos</h2>
+            <label>Nome: <input type="text" id="comprador-nome" required></label>
+            <label>Email: <input type="email" id="comprador-email" required></label>
+            <br>
         <div class="lista" id="lista"></div>
-        <button onclick="CadastrarIngresso()">Cadastrar</button>
     </div>
 
     
-    <script src="C:\Users\GScapinello\Desktop\Sistema venda ingressos\DataBase.js"></script>
+    <script src="DataBase.js"></script>
     <script src="compraIngresso.js"></script>
 </body>
 </html>
