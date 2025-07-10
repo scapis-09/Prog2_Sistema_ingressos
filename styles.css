@@ -100,7 +100,7 @@ footer{
     display: flex;
     align-items: center;
     padding: 15px;
-    background-color: #6800a5; /* Green */
+    background-color: #6800a5; 
     text-align: left;
     color: white;
     min-height: 50px;
@@ -117,6 +117,7 @@ footer{
     border-radius: 5px;
     cursor: pointer;
     font-size: 13px;
+    margin-top: 20px;
     margin-left: 10px;
     font-family:  Arial, sans-serif,'Franklin Gothic Medium', 'Arial Narrow';
 }
