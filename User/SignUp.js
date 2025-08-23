@@ -1,4 +1,4 @@
-
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 function Cadastrar() {
     const nome = document.getElementById("nome").value.trim();
@@ -8,15 +8,15 @@ function Cadastrar() {
     const cpf = document.getElementById("cpf").value;
     const idade = parseInt(document.getElementById("idade").value);
 
-    if (!nome || !sobrenome || !email || !senha || !cpf || isNaN(idade)) {
-        alert('Por favor, preencha todos os campos corretamente.');
-        return;
-    }
+    //if (!nome || !sobrenome || !email || !senha || !cpf || isNaN(idade)) {
+        //alert('Por favor, preencha todos os campos corretamente.');
+        //return;
+    //}
     createUserWithEmailAndPassword(auth, email, senha)
         .then((userCredential) => {
             const user = userCredential.user;
             // Não salve a senha!
-            const registro = { nome, sobrenome, email, cpf, idade };
+            //const registro = { nome, sobrenome, email, cpf, idade };
             // Salvar no banco (descomente se usar Realtime Database)
             // push(ref(db, 'usuarios/'), registro)
             //     .then(() => {
@@ -30,5 +30,4 @@ function Cadastrar() {
             alert('Erro ao cadastrar: ' + error.message);
         });
 }
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-const auth = getAuth();
+window.Cadastrar = Cadastrar;
