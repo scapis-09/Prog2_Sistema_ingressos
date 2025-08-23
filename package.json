@@ -1,0 +1,14 @@
+{
+  "name": "prog2_sistema_ingressos",
+  "version": "1.0.0",
+  "description": "**!!!Tela inicial ainda não finalizada!!!**\r  Cadastros de usuarios finalizado, precisa de sistema de login",
+  "main": "Admin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^12.1.0"
+  }
+}
