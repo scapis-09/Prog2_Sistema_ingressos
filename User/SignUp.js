@@ -1,3 +1,5 @@
+
+
 function Cadastrar() {
     const nome = document.getElementById("nome").value.trim();
     const sobrenome = document.getElementById("sobrenome").value.trim();
@@ -10,22 +12,23 @@ function Cadastrar() {
         alert('Por favor, preencha todos os campos corretamente.');
         return;
     }
-    else if (idade < 18) {
-        alert('Você deve ter pelo menos 18 anos para se cadastrar.');
-        return;
-    }
-    else{
-        const registro = { nome, sobrenome, email, senha, cpf, idade };
-
-        db.ref('usuarios/').push(registro)
-            .then(() => {
-                console.log('Cadastro realizado com sucesso!');
-            })
-            .catch((error) => {
-                console.error('Erro ao realizar cadastro:', error);
-            });
-    }
-    
-
-    
+    createUserWithEmailAndPassword(auth, email, senha)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            // Não salve a senha!
+            const registro = { nome, sobrenome, email, cpf, idade };
+            // Salvar no banco (descomente se usar Realtime Database)
+            // push(ref(db, 'usuarios/'), registro)
+            //     .then(() => {
+            //         console.log('Cadastro realizado com sucesso!');
+            //     })
+            //     .catch((error) => {
+            //         console.error('Erro ao realizar cadastro:', error);
+            //     });
+        })
+        .catch((error) => {
+            alert('Erro ao cadastrar: ' + error.message);
+        });
 }
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+const auth = getAuth();
