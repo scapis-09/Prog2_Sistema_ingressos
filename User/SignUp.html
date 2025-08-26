@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-    
 
     <title>Sistema de Venda de Ingressos</title>
 </head>
@@ -25,12 +22,12 @@
             <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
             <input type="number" id="idade" name="idade" placeholder="idade" required>
 
-            <button onclick="Cadastrar()">Cadastrar</button>
+            <button id="btnCadastrar">Cadastrar</button>
         </div>
     </div>
     
-    <script src="DataBase.js"></script>
-    <script src="SignUp.js"></script>
+    <script type="module" src="DataBase.js"></script>
+    <script type="module" src="SignUp.js"></script>
     
 </body>
 </html>
